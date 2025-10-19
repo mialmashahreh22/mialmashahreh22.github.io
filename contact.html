@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Me - mohammadalmashahra@gmail.com</title>
+    <link rel="stylesheet" href="style.css">
+    <script>
+        function validateForm() {
+            const name = document.getElementById("name").value;
+            const email = document.getElementById("email").value;
+            const country = document.getElementById("country").value;
+            const comments = document.getElementById("comments").value;
+
+            if (name === "" || email === "" || country === "" || comments === "") {
+                alert("Please fill in all fields before submitting.");
+                return false;
+            } else {
+                alert("Form submitted successfully!");
+                return true;
+            }
+        }
+    </script>
+</head>
+<body>
+
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="contact.html">Contact Me</a>
+    </nav>
+
+    <h1>Contact Me</h1>
+
+    <form onsubmit="return validateForm()">
+        <label>Full Name:</label><br>
+        <input type="text" id="name" placeholder="Enter your full name"><br><br>
+
+        <label>Email:</label><br>
+        <input type="email" id="email" placeholder="Enter your email"><br><br>
+
+        <label>Country:</label><br>
+        <input type="text" id="country" placeholder="Enter your country"><br><br>
+
+        <label>Comments:</label><br>
+        <textarea id="comments" rows="4" cols="30" placeholder="Write your comments"></textarea><br><br>
+
+        <input type="submit" value="Submit">
+    </form>
+
+</body>
+</html>
