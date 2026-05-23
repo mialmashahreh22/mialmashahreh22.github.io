@@ -1,82 +1,185 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>163905 - MOHAMMAD IBRAHIM YOUSEF ALMASHAHREH</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Mohammad Almashahreh cybersecurity portfolio: bug bounty writeups, Vibe Sec static analysis tool, SOC, cloud security, and security learning projects.">
+  <title>Mohammad Almashahreh | Cybersecurity Portfolio</title>
+  <link rel="icon" href="images/mosec-avatar.png" type="image/png">
+  <link rel="stylesheet" href="style.css">
+  <script src="app.js" defer></script>
 </head>
 <body>
-
-   
-    <nav>
-        <a href="index.html">Home</a>
-        <a href="contact.html">Contact Me</a>
+  <header class="site-header">
+    <a class="brand" href="#top" aria-label="Mohammad Almashahreh home">
+      <img src="images/mosec-avatar.png" alt="MOSEC logo">
+      <span>MOSEC</span>
+    </a>
+    <nav class="nav" aria-label="Main navigation">
+      <a href="#about">About</a>
+      <a href="#writeups">Writeups</a>
+      <a href="#vibesec">Vibe Sec</a>
+      <a href="#tools">Tools</a>
+      <a href="#contact">Contact</a>
     </nav>
+  </header>
 
-    
-    <header>
-        <h1>MOHAMMAD IBRAHIM YOUSEF ALMASHAHREH:163905</h1>
-        <h3>Cybersecurity Student – Fourth Year</h3>
-        <img src="images/yourphoto.jpg" alt="My Photo" width="200">
-    </header>
+  <main id="top">
+    <section class="hero">
+      <div class="hero-copy">
+        <p class="eyebrow">Cybersecurity Portfolio</p>
+        <h1>Mohammad Almashahreh</h1>
+        <p class="hero-text">
+          Cybersecurity student focused on bug bounty, web security, SOC analysis, cloud security, static analysis, and practical security research.
+        </p>
+        <div class="hero-actions">
+          <a class="button primary" href="#writeups">View writeups</a>
+          <a class="button secondary" href="https://github.com/mialmashahreh22" target="_blank" rel="noreferrer">GitHub profile</a>
+        </div>
+      </div>
+      <div class="hero-visual" aria-label="MOSEC cybersecurity logo">
+        <img src="images/mosec-logo.svg?v=soc-cloud" alt="MOSEC cybersecurity logo">
+      </div>
+    </section>
 
-    
-    <section>
-        <h2>My Key Soft Skills</h2>
-        <ul>
-            <li>Teamwork</li>
-            <li>Analytical Thinking</li>
-            <li>Problem Solving</li>
-            <li>Communication</li>
-            <li>Adaptability</li>
+    <section class="stats" aria-label="Portfolio highlights">
+      <article>
+        <strong>7</strong>
+        <span>Bug writeup simulations</span>
+      </article>
+      <article>
+        <strong>4</strong>
+        <span>Cybersecurity learning guides</span>
+      </article>
+      <article>
+        <strong>1</strong>
+        <span>Static analysis tool project</span>
+      </article>
+      <article>
+        <strong>2026</strong>
+        <span>Active portfolio buildout</span>
+      </article>
+    </section>
+
+    <section id="about" class="section split">
+      <div>
+        <p class="section-kicker">About</p>
+        <h2>Building a practical path into offensive and defensive security.</h2>
+      </div>
+      <div class="rich-text">
+        <p>
+          I build projects that turn cybersecurity concepts into clear reports, labs, tools, and learning paths. My work connects bug bounty methodology, secure code review, static analysis, SOC thinking, cloud security basics, and hands-on web security practice.
+        </p>
+        <p>
+          This website is my main portfolio hub. When I create new tools, writeups, labs, or research notes, this site can be updated as the central index.
+        </p>
+      </div>
+    </section>
+
+    <section class="section focus-grid" aria-label="Focus areas">
+      <article>
+        <span class="card-label">Bug Bounty</span>
+        <h3>Web Security Writeups</h3>
+        <p>Business logic, IDOR, token lifecycle, authentication edge cases, and safe vulnerable-app simulations.</p>
+      </article>
+      <article>
+        <span class="card-label">Static Analysis</span>
+        <h3>Secure Code Review</h3>
+        <p>Semgrep-style rules, risky code patterns, secret scanning, YARA basics, and source-code review workflows.</p>
+      </article>
+      <article>
+        <span class="card-label">SOC</span>
+        <h3>Detection Thinking</h3>
+        <p>Alert triage, log review, incident notes, and practical defensive reasoning for real-world operations.</p>
+      </article>
+      <article>
+        <span class="card-label">Cloud Security</span>
+        <h3>Identity and Exposure</h3>
+        <p>IAM basics, public storage risk, API exposure, access control, and cloud security fundamentals.</p>
+      </article>
+    </section>
+
+    <section id="writeups" class="section">
+      <div class="section-heading">
+        <p class="section-kicker">Bug Writeups</p>
+        <h2>Sanitized reports with realistic labs.</h2>
+        <p>Each repo explains one bug class and includes a safe browser simulation where the issue can be reproduced locally.</p>
+      </div>
+      <div class="cards" id="writeupCards"></div>
+    </section>
+
+    <section id="vibesec" class="section product-section">
+      <div class="product-copy">
+        <p class="section-kicker">Static Analysis Tool</p>
+        <h2>Vibe Sec: AI-assisted secure coding with Semgrep.</h2>
+        <p>
+          Vibe Coding Security is my VS Code extension experiment for scanning JavaScript and TypeScript code using local Semgrep rules. It connects secure coding practice with developer workflow.
+        </p>
+        <ul class="feature-list">
+          <li>Scan current file or full project</li>
+          <li>Show findings in editor diagnostics</li>
+          <li>Sidebar findings panel</li>
+          <li>OWASP-style rule baseline</li>
         </ul>
+        <a class="button primary" href="https://github.com/mialmashahreh22/vibe-coding-security" target="_blank" rel="noreferrer">Open Vibe Sec repo</a>
+      </div>
+      <div class="code-panel" aria-label="Vibe Sec example">
+        <div class="code-bar"><span></span><span></span><span></span></div>
+        <pre><code>rules:
+  - id: no-eval-js
+    message: Avoid eval because it can lead to code injection.
+    severity: ERROR
+    languages:
+      - javascript
+      - typescript
+    pattern: eval(...)</code></pre>
+      </div>
     </section>
 
-    
-    <section>
-        <h2>Favorite Programming Languages & Tools</h2>
-        <table border="1">
-            <tr>
-                <th>Name</th>
-                <th>Website</th>
-            </tr>
-            <tr>
-                <td>Python</td>
-                <td><a href="https://www.python.org/" target="_blank">python.org</a></td>
-            </tr>
-            <tr>
-                <td>Wireshark</td>
-                <td><a href="https://www.wireshark.org/" target="_blank">wireshark.org</a></td>
-            </tr>
-            <tr>
-                <td>Burp Suite</td>
-                <td><a href="https://portswigger.net/burp" target="_blank">portswigger.net</a></td>
-            </tr>
-            <tr>
-                <td>Linux</td>
-                <td><a href="https://www.linux.org/" target="_blank">linux.org</a></td>
-            </tr>
-        </table>
+    <section id="tools" class="section">
+      <div class="section-heading">
+        <p class="section-kicker">Other Projects</p>
+        <h2>Guides, tools, and labs I have built.</h2>
+        <p>This section is ready for future tools. When a new tool or research project is created, it can be added here.</p>
+      </div>
+      <div class="cards tool-cards" id="toolCards"></div>
     </section>
 
-    <!-- Mailto -->
-    <section>
-        <p>
-            <a href="mailto:mialmashahreh22@cit.just.edu.jo">Send me an email</a>
-        </p>
+    <section class="section roadmap">
+      <div>
+        <p class="section-kicker">Future Updates</p>
+        <h2>Portfolio roadmap.</h2>
+      </div>
+      <div class="timeline">
+        <article>
+          <span>01</span>
+          <h3>SOC mini labs</h3>
+          <p>Log analysis, alert triage, phishing investigation, and incident timeline practice.</p>
+        </article>
+        <article>
+          <span>02</span>
+          <h3>Cloud security labs</h3>
+          <p>IAM misconfiguration, public bucket exposure, and token/metadata service basics.</p>
+        </article>
+        <article>
+          <span>03</span>
+          <h3>More tools</h3>
+          <p>New scripts, VS Code features, scanners, checklists, and browser-based learning apps.</p>
+        </article>
+      </div>
     </section>
 
-    <!-- Future Goals -->
-    <section>
-        <h2>Where Do I See Myself in 4 Years?</h2>
-        <p>
-            In four years, I see myself working as a penetration tester, specializing in web application security. 
-            I aim to contribute to protecting organizations from cyber threats by identifying and fixing vulnerabilities. 
-            I also plan to pursue certifications like OSCP and CEH to enhance my skills. 
-            My goal is to become a recognized cybersecurity expert and continue growing in the field of ethical hacking.
-        </p>
+    <section id="contact" class="section contact">
+      <div>
+        <p class="section-kicker">Contact</p>
+        <h2>Let’s connect.</h2>
+        <p>For my latest projects, writeups, and labs, GitHub is the best place to follow my work.</p>
+      </div>
+      <div class="contact-actions">
+        <a class="button primary" href="https://github.com/mialmashahreh22" target="_blank" rel="noreferrer">GitHub</a>
+        <a class="button secondary" href="mailto:mialmashahreh22@cit.just.edu.jo">Email</a>
+      </div>
     </section>
-
+  </main>
 </body>
 </html>
