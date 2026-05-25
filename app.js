@@ -63,6 +63,13 @@ const writeups = [
     action: "Open guide"
   },
   {
+    title: "Cloud Security Engineer 10 Essentials",
+    tag: "Guide",
+    text: "Top 10 things to know before becoming a cloud security engineer.",
+    url: "https://mialmashahreh22.github.io/cloud-security-engineer-10-essentials/",
+    action: "Open guide"
+  },
+  {
     title: "Windows Filesystem Guide",
     tag: "Guide",
     text: "Windows directories, permissions, PowerShell, and investigation paths.",
