@@ -66,8 +66,8 @@ const writeups = [
     title: "Cloud Security Engineer 10 Essentials",
     tag: "Guide",
     text: "Top 10 things to know before becoming a cloud security engineer.",
-    url: "https://mialmashahreh22.github.io/cloud-security-engineer-10-essentials/",
-    action: "Open guide"
+    url: "https://github.com/mialmashahreh22/cloud-security-engineer-10-essentials",
+    action: "Open repo"
   },
   {
     title: "Windows Filesystem Guide",
