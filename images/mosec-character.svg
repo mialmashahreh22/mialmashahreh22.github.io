@@ -1,0 +1,121 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 620" role="img" aria-labelledby="title desc">
+  <title id="title">Animated MOSEC Cybersecurity Character</title>
+  <desc id="desc">An animated cybersecurity shield mascot with circuit eyes, glowing nodes, and a scanning visor in the MOSEC color theme.</desc>
+  <defs>
+    <linearGradient id="shieldGradient" x1="0" x2="1" y1="0" y2="1">
+      <stop offset="0%" stop-color="#38bdf8"/>
+      <stop offset="54%" stop-color="#22c55e"/>
+      <stop offset="100%" stop-color="#f59e0b"/>
+    </linearGradient>
+    <linearGradient id="panelGradient" x1="0" x2="1" y1="0" y2="1">
+      <stop offset="0%" stop-color="#0f172a"/>
+      <stop offset="100%" stop-color="#020617"/>
+    </linearGradient>
+    <radialGradient id="aura" cx="50%" cy="45%" r="58%">
+      <stop offset="0%" stop-color="#38bdf8" stop-opacity="0.24"/>
+      <stop offset="55%" stop-color="#22c55e" stop-opacity="0.12"/>
+      <stop offset="100%" stop-color="#020617" stop-opacity="0"/>
+    </radialGradient>
+    <filter id="softGlow" x="-25%" y="-25%" width="150%" height="150%">
+      <feGaussianBlur stdDeviation="10" result="blur"/>
+      <feColorMatrix in="blur" type="matrix" values="0 0 0 0 0.22 0 0 0 0 0.74 0 0 0 0 0.97 0 0 0 0.55 0"/>
+      <feMerge>
+        <feMergeNode/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+    <filter id="nodeGlow" x="-80%" y="-80%" width="260%" height="260%">
+      <feGaussianBlur stdDeviation="5" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+    <style>
+      .float { animation: float 4.8s ease-in-out infinite; transform-origin: 450px 300px; }
+      .shadow { animation: shadowPulse 4.8s ease-in-out infinite; transform-origin: 450px 520px; }
+      .scan { animation: scanMove 2.8s ease-in-out infinite; }
+      .blink { animation: blink 5.2s ease-in-out infinite; transform-origin: center; }
+      .pulse-a { animation: pulse 1.8s ease-in-out infinite; }
+      .pulse-b { animation: pulse 1.8s ease-in-out infinite 0.35s; }
+      .pulse-c { animation: pulse 1.8s ease-in-out infinite 0.7s; }
+      .wire { stroke-dasharray: 18 12; animation: dash 3.8s linear infinite; }
+      .antenna { animation: antenna 2.6s ease-in-out infinite; transform-origin: 450px 134px; }
+      @keyframes float {
+        0%, 100% { transform: translateY(0); }
+        50% { transform: translateY(-18px); }
+      }
+      @keyframes shadowPulse {
+        0%, 100% { transform: scaleX(1); opacity: 0.24; }
+        50% { transform: scaleX(0.82); opacity: 0.12; }
+      }
+      @keyframes scanMove {
+        0%, 100% { transform: translateY(-42px); opacity: 0; }
+        18%, 75% { opacity: 0.8; }
+        50% { transform: translateY(56px); }
+      }
+      @keyframes blink {
+        0%, 92%, 100% { transform: scaleY(1); }
+        94%, 96% { transform: scaleY(0.18); }
+      }
+      @keyframes pulse {
+        0%, 100% { opacity: 0.72; transform: scale(1); }
+        50% { opacity: 1; transform: scale(1.16); }
+      }
+      @keyframes dash {
+        to { stroke-dashoffset: -60; }
+      }
+      @keyframes antenna {
+        0%, 100% { transform: rotate(-2deg); }
+        50% { transform: rotate(2deg); }
+      }
+    </style>
+  </defs>
+
+  <rect width="900" height="620" rx="42" fill="#0b1120"/>
+  <circle cx="450" cy="308" r="276" fill="url(#aura)"/>
+  <path d="M0 506 C132 448 236 576 384 494 C538 410 616 520 760 436 C822 400 866 388 900 392 V620 H0Z" fill="#111827" opacity="0.62"/>
+
+  <ellipse class="shadow" cx="450" cy="536" rx="174" ry="24" fill="#38bdf8"/>
+
+  <g class="float" filter="url(#softGlow)">
+    <g class="antenna" fill="none" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M450 142v-48" stroke="#38bdf8" stroke-width="12"/>
+      <path d="M450 94h58l28-32h56" stroke="#38bdf8" stroke-width="8"/>
+      <path d="M450 94h-58l-28-32h-56" stroke="#22c55e" stroke-width="8"/>
+      <circle class="pulse-a" cx="596" cy="62" r="12" fill="#22c55e" filter="url(#nodeGlow)"/>
+      <circle class="pulse-b" cx="304" cy="62" r="12" fill="#38bdf8" filter="url(#nodeGlow)"/>
+    </g>
+
+    <path d="M450 134 635 205v124c0 124-74 226-185 278-111-52-185-154-185-278V205l185-71Z" fill="#020617" stroke="url(#shieldGradient)" stroke-width="20" stroke-linejoin="round"/>
+    <path d="M450 168 594 224v96c0 96-56 176-144 219-88-43-144-123-144-219v-96l144-56Z" fill="url(#panelGradient)" opacity="0.98"/>
+
+    <g class="scan">
+      <path d="M326 278h248" stroke="#38bdf8" stroke-width="12" stroke-linecap="round" opacity="0.26"/>
+      <path d="M342 278h216" stroke="#22c55e" stroke-width="4" stroke-linecap="round"/>
+    </g>
+
+    <g fill="none" stroke-linecap="round" stroke-linejoin="round">
+      <path class="wire" d="M338 315h224" stroke="url(#shieldGradient)" stroke-width="16"/>
+      <path d="M390 315v84M450 315v84M510 315v84" stroke="url(#shieldGradient)" stroke-width="14"/>
+      <path d="M386 438h128" stroke="#f59e0b" stroke-width="14"/>
+    </g>
+
+    <g class="blink">
+      <circle cx="338" cy="315" r="26" fill="#38bdf8" filter="url(#nodeGlow)"/>
+      <circle cx="562" cy="315" r="26" fill="#22c55e" filter="url(#nodeGlow)"/>
+    </g>
+    <circle class="pulse-a" cx="390" cy="399" r="23" fill="#a78bfa" filter="url(#nodeGlow)"/>
+    <circle class="pulse-b" cx="450" cy="399" r="23" fill="#22c55e" filter="url(#nodeGlow)"/>
+    <circle class="pulse-c" cx="510" cy="399" r="23" fill="#f59e0b" filter="url(#nodeGlow)"/>
+
+    <path d="M332 470 C380 504 520 504 568 470" fill="none" stroke="#bae6fd" stroke-width="8" stroke-linecap="round" opacity="0.72"/>
+
+    <g fill="none" stroke="#38bdf8" stroke-width="8" stroke-linecap="round" stroke-linejoin="round" opacity="0.84">
+      <path d="M266 294h-68l-36-42h-54"/>
+      <path d="M634 294h68l36-42h54"/>
+      <circle class="pulse-a" cx="108" cy="252" r="10" fill="#22c55e" stroke="none" filter="url(#nodeGlow)"/>
+      <circle class="pulse-b" cx="792" cy="252" r="10" fill="#22c55e" stroke="none" filter="url(#nodeGlow)"/>
+    </g>
+  </g>
+</svg>
