@@ -56,6 +56,13 @@ const writeups = [
     action: "Open guide"
   },
   {
+    title: "50 Linux Commands You Must Know",
+    tag: "Guide",
+    text: "Practical Linux command-line guide for cybersecurity students, SOC beginners, and terminal practice.",
+    url: "https://Mosec2525.github.io/linux-50-commands-you-must-know/",
+    action: "Open guide"
+  },
+  {
     title: "Networking Basics",
     tag: "Guide",
     text: "Networking fundamentals for cybersecurity with Network Quest.",
